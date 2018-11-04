@@ -1,0 +1,3 @@
+[submodule "Assets/Plugins/EventLogger-UnityClient"]
+	path = Assets/Plugins/EventLogger-UnityClient
+	url = https://github.com/falldamagestudio/EventLogger-UnityClient
