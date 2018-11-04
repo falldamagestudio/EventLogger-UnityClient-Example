@@ -2,9 +2,15 @@
 {
     public static EventLogger.Session session;
 
-    public static void Log(string type, object data)
+    public static void LogJsonData(string type, string jsonData)
     {
         if (session != null)
-            session.SubmitEvent(type, data);
+            session.LogJsonData(type, jsonData);
+    }
+
+    public static void LogSerializableObject(string type, object data)
+    {
+        if (session != null)
+            session.LogSerializableObject(type, data);
     }
 }
