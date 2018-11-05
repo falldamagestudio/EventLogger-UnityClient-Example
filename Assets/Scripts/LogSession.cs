@@ -8,15 +8,15 @@
             session.Log(type);
     }
 
-    public static void LogJsonData(string type, string jsonData)
+    public static void Log(string type, string jsonData)
     {
         if (session != null)
-            session.LogJsonData(type, jsonData);
+            session.Log(type, jsonData);
     }
 
-    public static void LogSerializableObject(string type, object data)
+    public static void Log<LogEventType>(LogEventType logEvent) where LogEventType : EventLogger.LogEvent
     {
         if (session != null)
-            session.LogSerializableObject(type, data);
+            session.Log(logEvent);
     }
 }
